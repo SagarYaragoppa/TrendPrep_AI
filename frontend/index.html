@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Question Paper Organizer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>AI Paper Organizer</h1>
+            <p>Upload PYQs and get a single topic-wise document instantly.</p>
+        </header>
+
+        <main>
+            <section class="card upload-section">
+                <h2>1. Upload Papers (PDF/Images)</h2>
+                <div class="drop-zone" id="drop-zone">
+                    <span class="drop-icon">📂</span>
+                    <p>Drag & drop files here, or <button type="button" id="browse-btn">browse</button></p>
+                    <input type="file" id="file-input" multiple accept=".pdf,image/*" hidden>
+                </div>
+                <div id="file-list" class="file-list"></div>
+            </section>
+
+            <section class="card syllabus-section">
+                <h2>2. Define Syllabus Outline</h2>
+                <p class="subtitle">Enter your syllabus topics and subtopics:</p>
+                <textarea id="syllabus-input" placeholder="Example:
+Math
+  - Algebra
+  - Geometry
+Reasoning
+  - Coding-Decoding
+  - Series"></textarea>
+            </section>
+
+            <section class="card options-section">
+                <h2>3. Output Mode</h2>
+                <div class="option-group">
+                    <label><input type="radio" name="output-mode" value="clean" checked> Clean organized PDF</label>
+                    <label><input type="radio" name="output-mode" value="full"> Full preserve-all PDF</label>
+                    <label><input type="radio" name="output-mode" value="both"> Download both</label>
+                </div>
+            </section>
+
+            <div class="action-bar">
+                <button class="btn primary" id="process-btn">Organize Papers</button>
+            </div>
+
+            <section class="status-section" id="status-section" style="display: none;">
+                <div class="loader"></div>
+                <p id="status-text">Processing your papers using Local AI...</p>
+            </section>
+        </main>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

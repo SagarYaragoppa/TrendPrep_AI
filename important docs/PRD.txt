@@ -1,0 +1,216 @@
+1️⃣ PRD (Product Requirements Document)
+🧾 Project Name
+
+AI Question Paper Organizer (PYQ Segregation System)
+
+❗ Problem Statement
+
+Students preparing for government exams face difficulty in:
+
+Managing multiple question papers (PDFs/images)
+
+Extracting questions manually (very time-consuming)
+
+Organizing questions topic-wise & subtopic-wise
+
+Ensuring no question is missed or misplaced
+
+👉 Current process is:
+
+Manual
+
+Error-prone
+
+Inefficient
+
+🎯 Goal of the Project
+
+Build a local AI-powered system that:
+
+Accepts multiple PDFs (20+ at once)
+
+Accepts question papers in image format
+
+Takes syllabus (once)
+
+Automatically:
+
+Extracts questions
+
+Understands syllabus structure
+
+Classifies each question into:
+
+Topic
+
+Subtopic
+
+Generates a clean final document with:
+
+All questions properly organized
+
+No duplication
+
+No missing questions
+
+👤 Users
+
+Government exam aspirants (UPSC, SSC, Banking, etc.)
+
+Students preparing topic-wise PYQs
+
+Personal use (single user system)
+
+⭐ Core Features
+1. 📂 Bulk File Upload
+
+Upload multiple PDFs (20–100)
+
+Upload images (JPG, PNG, scanned papers)
+
+2. 🔍 Text Extraction Engine
+
+Extract text from:
+
+PDFs
+
+Images (OCR)
+
+Maintain:
+
+Question numbering
+
+Options (MCQs)
+
+Formatting
+
+3. 📘 Syllabus Input (One-time Setup)
+
+User provides syllabus in:
+
+Text / PDF / manual input
+
+Example:
+
+Math
+  - Algebra
+  - Geometry
+  - Trigonometry
+
+Reasoning
+  - Coding-Decoding
+  - Series
+4. 🧠 AI Question Classification
+
+Map each question to:
+
+Topic
+
+Subtopic
+
+Must ensure:
+
+100% coverage (no question left)
+
+Correct classification
+
+5. 📊 Question Organization System
+
+Group questions like:
+
+Math
+  ├── Algebra
+  │     Q1, Q5, Q20 complete questions
+  ├── Geometry
+        Q3, Q11
+6. 📄 Final Output Generator
+
+Generate:
+
+Clean structured document (PDF / DOCX / TXT)
+
+Includes:
+
+Topic-wise questions
+
+Subtopic grouping
+
+Original question reference (optional)
+
+7. 🔁 Deduplication System
+
+Detect and remove:
+
+Duplicate questions across papers
+
+8. 📁 Folder-Based Agent Access
+
+AI agent can:
+
+Read all files from a folder
+
+Process continuously
+
+Update output
+
+📌 Use Cases
+
+Upload 30 PYQ PDFs → get topic-wise organized document
+
+Upload scanned papers → extract + classify
+
+Add syllabus once → reuse forever
+
+Generate revision-ready notes
+
+✅ Success Criteria
+
+✔ All questions extracted (no loss)
+
+✔ ≥ 90–95% correct classification
+
+✔ Handles 20+ PDFs smoothly
+
+✔ Works fully locally (no internet required optional)
+
+✔ Output usable for exam revision directly
+
+🚫 Non-Goals (Important for clarity)
+
+No need for:
+
+Multi-user system
+
+Authentication/login
+
+Cloud deployment (for now)
+
+⚠️ Constraints
+
+Must work on normal laptop
+
+Should handle large input (1000+ questions)
+
+OCR accuracy must be high
+
+System should not crash on bulk input
+
+🧠 AI Behavior Requirements
+
+Never skip any question
+
+If unsure → still assign best possible topic
+
+Maintain original meaning of question
+
+Avoid hallucination (do NOT create new questions)
+
+🔥 Future Scope (Optional but powerful)
+
+Difficulty tagging (Easy/Medium/Hard)
+
+Year-wise tagging (PYQ 2020, etc.)
+
+Search functionality
+
+Web UI upgrade
